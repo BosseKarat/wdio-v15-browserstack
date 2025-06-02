@@ -7,7 +7,7 @@
 
 # Steps to reproduce the issue
 
-Every version below 9.14.0 is working. 
+Every version below 9.15.0 is working, package.json will start you at: 
 
     "@wdio/browserstack-service": "^9.14.0",
     "@wdio/cli": "^9.14.0",
