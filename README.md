@@ -16,7 +16,7 @@ Every version below 9.14.0 is working.
     "@wdio/spec-reporter": "^9.14.0",
     "undici": "^7.10.0"
 
-If these versions are installed instead:
+If v.9.15.0 installed instead:
 
     "@wdio/browserstack-service": "^9.15.0",
     "@wdio/cli": "^9.15.0",
@@ -25,7 +25,7 @@ If these versions are installed instead:
     "@wdio/spec-reporter": "^9.15.0",
     "undici": "^7.10.0"
 
-Running your tests using Browserstack will not work and the error below is displayed. The ECONNRESET error indicates that the connection was forcibly closed by the remote server. This could be a problem related to me using a VPN. I am unable to test this without using a VPN so it would be greatly appreciated if debugging is done with that in mind. 
+... running your tests using Browserstack will not work and the error below is displayed. The ECONNRESET error indicates that the connection was forcibly closed by the remote server. This could be a problem related to me using a VPN. I am unable to test this without using a VPN so it would be greatly appreciated if debugging is done with that in mind. The error that I'm having is pointing towards these two PR's that came with 9.15.0:
 
 PR:https://github.com/webdriverio/webdriverio/pull/14493
 or 
