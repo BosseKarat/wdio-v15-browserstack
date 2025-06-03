@@ -27,8 +27,8 @@ If v.9.15.0 installed instead:
 
 ... running your tests using Browserstack will not work and the error below is displayed. The ECONNRESET error indicates that the connection was forcibly closed by the remote server. This could be a problem related to me using a VPN. I am unable to test this without using a VPN so it would be greatly appreciated if debugging is done with that in mind. The error that I'm having is pointing towards these two PR's that came with 9.15.0:
 
-PR:https://github.com/webdriverio/webdriverio/pull/14493
-or 
-PR:https://github.com/webdriverio/webdriverio/pull/13938
-
 ERROR @wdio/runner: Error: WebDriverError: Request failed with error code ECONNRESET when running "https://hub-cloud.browserstack.com/wd/hub/session" with method "POST" and args "{"capabilities":{"alwaysMatch":{"bstack:options":{"os":"Windows","osVersion":"10","projectName":"ProjectName","buildName":"BuildName + 2025-06-02T19:37:50.237Z","sessionName":"SessionName","seleniumVersion":"4.20.0","debug":"true","networkLogs":"true","consoleLogs":"verbose","wdioService":"9.14.0","testhubBuildUuid":"XXXXX","buildProductMap":{"observability":true,"accessibility":null,"percy":false,"automate":true,"app_automate":false}},"browserName":"chrome","browserVersion":"latest","webSocketUrl":true,"unhandledPromptBehavior":"ignore"},"firstMatch":[{}]}}"
+
+
+The issue is almost certain a consequense of this PR: https://github.com/webdriverio/webdriverio/pull/14493. If you replace this file "...\node_modules\webdriver\build\node.js" in node_modules with the node.js file in the root of the repo, Browserstack is working again. The node.js in the root of the repo contains a revert of the changes introduced in the PR mentioned.  
+
